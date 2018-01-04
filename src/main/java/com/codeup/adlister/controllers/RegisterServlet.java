@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet {
 
 
        String hashPassword =  Password.hash(password);
-
+       boolean checkPassword = Password.check(password, hashPassword);
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
